@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/accountToolbarID"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/White">
+
+        <android.support.design.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="Create Collection"
+                android:textColor="@color/colorPrimary"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+
+            <ImageButton
+                android:id="@+id/optionsButtonID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/vert_red_24dp"
+                android:clickable="true"
+                android:layout_marginEnd="5dp"
+                android:foreground="?attr/selectableItemBackground"
+                app:layout_anchor="@+id/textView"
+                app:layout_anchorGravity="right|center" />
+
+
+        </android.support.design.widget.CoordinatorLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/accountToolbarID">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/selectImageCardID"
+                android:layout_width="350dp"
+                android:layout_height="250dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="10dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <ImageView
+                        android:id="@+id/pickImageID"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/image_icon"/>
+
+
+                </RelativeLayout>
+
+
+            </android.support.v7.widget.CardView>
+
+
+            <EditText
+                android:id="@+id/titleEditTextID"
+                android:layout_below="@+id/selectImageCardID"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginEnd="40dp"
+                android:layout_marginTop="40dp"
+                android:hint="collection title"
+                android:gravity="center|start"
+                android:textStyle="italic"
+                android:elevation="10dp"
+                android:textColor="@color/colorAccent"
+                android:textColorHint="@color/light"
+                android:background="@drawable/edittext_back1"/>
+
+
+            <EditText
+                android:id="@+id/totalEditTextID"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/titleEditTextID"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="40dp"
+                android:background="@drawable/edittext_back1"
+                android:gravity="center|start"
+                android:elevation="10dp"
+                android:textStyle="italic"
+                android:hint="collection size"
+                android:inputType="number"
+                android:textColor="@color/colorAccent"
+                android:textColorHint="@color/light" />
+
+            <mabbas007.tagsedittext.TagsEditText
+                android:id="@+id/tagsEditText"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                app:allowSpaceInTag="true"
+                android:layout_marginStart="40dp"
+                android:layout_marginEnd="40dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center|start"
+                android:elevation="10dp"
+                android:textColor="@color/colorAccent"
+                android:hint="collection tags"
+                android:textStyle="italic"
+                android:textColorHint="@color/light"
+                android:background="@drawable/edittext_back1"
+                android:layout_below="@+id/totalEditTextID"
+                app:tagsCloseImageRight="@drawable/tag_close"
+                app:tagsBackground="@drawable/round_button"
+                app:tagsTextColor="@color/White"
+                app:tagsTextSize="@dimen/defaultTagsTextSize"
+                app:tagsCloseImagePadding="@dimen/defaultTagsCloseImagePadding"/>
+
+
+            <com.daimajia.numberprogressbar.NumberProgressBar
+                android:id="@+id/progressBarID"
+                android:layout_width="339dp"
+                android:layout_height="21dp"
+                android:layout_marginBottom="20dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/tagsEditText"
+                android:layout_marginTop="20dp"
+                android:padding="5dp"
+                app:progress_text_size="14sp" />
+
+
+            <Button
+                android:id="@+id/uploadCollectionID"
+                android:layout_width="200dp"
+                android:layout_height="35dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/round_disabled_button"
+                android:elevation="40dp"
+                android:enabled="false"
+                android:layout_below="@+id/progressBarID"
+                android:text="Upload Collection"
+                android:textColor="#ffffff"
+                android:textStyle="bold"
+                android:textSize="14sp" />
+
+        </RelativeLayout>
+
+
+
+
+    </ScrollView>
+
+
+
+</RelativeLayout>

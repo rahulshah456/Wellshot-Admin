@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/accountToolbarID"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/White">
+
+        <android.support.design.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="Upload Wallpapers"
+                android:textColor="@color/colorPrimary"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+
+            <ImageButton
+                android:id="@+id/optionsButtonID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/vert_red_24dp"
+                android:clickable="true"
+                android:layout_marginEnd="5dp"
+                android:foreground="?attr/selectableItemBackground"
+                app:layout_anchor="@+id/textView"
+                app:layout_anchorGravity="right|center" />
+
+
+        </android.support.design.widget.CoordinatorLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/accountToolbarID">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <EditText
+                android:id="@+id/titleEditTextID"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="40dp"
+                android:background="@drawable/edittext_back1"
+                android:gravity="center|start"
+                android:elevation="10dp"
+                android:textStyle="italic"
+                android:hint="collection title"
+                android:textColor="@color/colorAccent"
+                android:textColorHint="@color/light" />
+
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/orignalCardID"
+                android:layout_width="350dp"
+                android:layout_height="100dp"
+                android:layout_centerHorizontal="true"
+                app:cardCornerRadius="12dp"
+                android:layout_marginTop="20dp"
+                android:layout_below="@+id/titleEditTextID"
+                app:cardElevation="10dp">
+
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <com.mikhaellopez.circularimageview.CircularImageView
+                        android:id="@+id/orignalID"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="8dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/component"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <TextView
+                        android:id="@+id/orignalCountID"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="0"
+                        android:textColor="#ffffff"
+                        android:textSize="30sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@+id/orignalID"
+                        app:layout_constraintEnd_toEndOf="@+id/orignalID"
+                        app:layout_constraintStart_toStartOf="@+id/orignalID"
+                        app:layout_constraintTop_toTopOf="@+id/orignalID" />
+
+
+                    <Button
+                        android:id="@+id/selectImagesID"
+                        android:layout_width="200dp"
+                        android:layout_height="35dp"
+                        android:layout_marginBottom="32dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/round_button"
+                        android:elevation="40dp"
+                        android:text="Select Images"
+                        android:textColor="#ffffff"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.447"
+                        app:layout_constraintStart_toEndOf="@+id/orignalID"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="1.0" />
+
+
+                </android.support.constraint.ConstraintLayout>
+
+
+            </android.support.v7.widget.CardView>
+
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/compressCardID"
+                android:layout_width="350dp"
+                android:layout_height="100dp"
+                android:layout_below="@+id/orignalCardID"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="10dp">
+
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <com.mikhaellopez.circularimageview.CircularImageView
+                        android:id="@+id/compressID"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="8dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/component"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.666" />
+
+
+                    <TextView
+                        android:id="@+id/compressCountID"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="0"
+                        android:textColor="#ffffff"
+                        android:textSize="30sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@+id/compressID"
+                        app:layout_constraintEnd_toEndOf="@+id/compressID"
+                        app:layout_constraintStart_toStartOf="@+id/compressID"
+                        app:layout_constraintTop_toTopOf="@+id/compressID" />
+
+
+                    <Button
+                        android:id="@+id/compressImagesID"
+                        android:layout_width="200dp"
+                        android:layout_height="35dp"
+                        android:layout_marginBottom="32dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/round_disabled_button"
+                        android:elevation="40dp"
+                        android:enabled="false"
+                        android:text="Compress Images"
+                        android:textColor="#ffffff"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.473"
+                        app:layout_constraintStart_toEndOf="@+id/compressID"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="1.0" />
+
+
+                </android.support.constraint.ConstraintLayout>
+
+
+            </android.support.v7.widget.CardView>
+
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/thumbnailCardID"
+                android:layout_width="350dp"
+                android:layout_height="100dp"
+                android:layout_below="@+id/compressCardID"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="20dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="10dp">
+
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <com.mikhaellopez.circularimageview.CircularImageView
+                        android:id="@+id/thumbnailID"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="8dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/component"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <TextView
+                        android:id="@+id/thumbnailCountID"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="0"
+                        android:textColor="#ffffff"
+                        android:textSize="30sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@+id/thumbnailID"
+                        app:layout_constraintEnd_toEndOf="@+id/thumbnailID"
+                        app:layout_constraintStart_toStartOf="@+id/thumbnailID"
+                        app:layout_constraintTop_toTopOf="@+id/thumbnailID" />
+
+
+                    <Button
+                        android:id="@+id/createThumbnailsID"
+                        android:layout_width="200dp"
+                        android:layout_height="35dp"
+                        android:layout_marginBottom="32dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/round_disabled_button"
+                        android:elevation="40dp"
+                        android:enabled="false"
+                        android:text="Create Thumbnails"
+                        android:textColor="#ffffff"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.473"
+                        app:layout_constraintStart_toEndOf="@+id/thumbnailID"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="1.0" />
+
+
+                </android.support.constraint.ConstraintLayout>
+
+
+            </android.support.v7.widget.CardView>
+
+
+            <com.daimajia.numberprogressbar.NumberProgressBar
+                android:id="@+id/progressBarID"
+                android:layout_width="339dp"
+                android:layout_height="21dp"
+                android:layout_marginBottom="20dp"
+                android:layout_below="@+id/thumbnailCardID"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:padding="5dp"
+                app:progress_text_size="14sp" />
+
+
+            <Button
+                android:id="@+id/uploadImagesID"
+                android:layout_width="200dp"
+                android:layout_height="35dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/round_disabled_button"
+                android:elevation="40dp"
+                android:enabled="false"
+                android:layout_below="@+id/progressBarID"
+                android:text="Upload Images"
+                android:textColor="#ffffff"
+                android:textStyle="bold"
+                android:textSize="14sp" />
+
+
+
+        </RelativeLayout>
+
+
+
+
+
+    </ScrollView>
+
+
+
+</RelativeLayout>

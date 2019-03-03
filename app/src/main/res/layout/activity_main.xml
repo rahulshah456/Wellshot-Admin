@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_list"
+    android:id="@+id/constraintLayoutID"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="139dp"
+        android:layout_height="133dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/walshot_icon"
+        app:layout_constraintBottom_toTopOf="@+id/signInGooogleID"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.2" />
+
+
+    <com.ebanx.swipebtn.SwipeButton
+        android:id="@+id/signInGooogleID"
+        android:layout_width="280dp"
+        android:layout_height="53dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        app:button_background="@drawable/shape_button"
+        app:button_bottom_padding="12dp"
+        app:button_image_disabled="@drawable/google_1298745"
+        app:button_image_enabled="@drawable/google_1298745"
+        app:button_image_height="65dp"
+        app:button_image_width="90dp"
+        app:button_left_padding="12dp"
+        app:button_right_padding="12dp"
+        app:button_top_padding="12dp"
+        app:has_activate_state="true"
+        app:initial_state="disabled"
+        app:inner_text="SWIPE TO LOGIN"
+        app:inner_text_background="@drawable/shape_rounded"
+        app:inner_text_bottom_padding="18dp"
+        app:inner_text_color="@android:color/white"
+        app:inner_text_left_padding="40dp"
+        app:inner_text_size="16sp"
+        app:inner_text_top_padding="18dp"
+        app:layout_constraintBottom_toTopOf="@+id/signInFacebookID"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <com.ebanx.swipebtn.SwipeButton
+        android:id="@+id/signInFacebookID"
+        android:layout_width="280dp"
+        android:layout_height="53dp"
+        android:layout_marginBottom="64dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        app:button_background="@drawable/shape_button"
+        app:button_image_disabled="@drawable/facebook_high"
+        app:button_image_enabled="@drawable/facebook_high"
+        app:button_image_height="65dp"
+        app:button_image_width="90dp"
+        app:has_activate_state="true"
+        app:initial_state="disabled"
+        app:inner_text="SWIPE TO LOGIN"
+        app:inner_text_background="@drawable/shape_rounded"
+        app:inner_text_bottom_padding="18dp"
+        app:inner_text_color="@android:color/white"
+        app:inner_text_left_padding="40dp"
+        app:inner_text_size="16sp"
+        app:inner_text_top_padding="18dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

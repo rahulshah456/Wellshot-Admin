@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/collection_menuID"
+        android:title="Collection"
+        android:icon="@drawable/collection_blue_24dp"/>
+
+    <item
+        android:id="@+id/wallpapers_menuID"
+        android:title="Wallpapers"
+        android:icon="@drawable/wallpapers_red_24dp"/>
+
+    <item
+        android:id="@+id/community_menuID"
+        android:title="Community"
+        android:icon="@drawable/community_red_24dp"/>
+
+
+
+
+</menu>
