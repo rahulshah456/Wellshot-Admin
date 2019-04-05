@@ -2,14 +2,6 @@ apply plugin: 'com.android.application'
 apply plugin: 'com.google.gms.google-services'
 
 android {
-    signingConfigs {
-        config {
-            keyAlias 'key0'
-            keyPassword 'mustang'
-            storeFile file('C:/Users/Edward/.AndroidStudio3.2/config/wellAdmin.jks')
-            storePassword 'agerar'
-        }
-    }
     compileSdkVersion 28
     defaultConfig {
         applicationId "com.rahul.wellshot.welladmin"
@@ -18,7 +10,6 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-        signingConfig signingConfigs.config
     }
     buildTypes {
         release {
